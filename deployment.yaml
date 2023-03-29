@@ -18,7 +18,8 @@ spec:
         image: hyunjun1325/node:0.11
         ports:
         - containerPort: 8080
-        command: ["/bin/bash","node", "/home/node/index.js"]
+        command: ["/bin/bash","-ec", "while :; do sleep 5; done"]
+        # command: ["/bin/bash","node", "/home/node/index.js"]
         volumeMounts:
         - mountPath: "/home/node"
           name: capstone-pvc
